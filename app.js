@@ -1,8 +1,8 @@
 var http = require("http");
 var fs = require('fs');
+var os = require("os");
 
 var port = process.env.NODEJS_PORT || 8080;
-var id = Math.floor(Math.random() * 100);
 
 console.log(`Server will start at port: ${port}`);
 
@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
     if (req.url == '/') {
         fs.readFile('./wwwroot/index.html', function (err, data) {
             res.writeHead(200, { 'Content-type': 'text/html' });
-            var webPage = data.toString().replace("{#ID}", "" + id);
+            var webPage = data.toString().replace("{#HOSTNAME}", "" + os.hostname());
             res.write(webPage);
             return res.end();
         });
