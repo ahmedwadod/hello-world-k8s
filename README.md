@@ -4,7 +4,7 @@ It uses only built-in Node.js modules for simplicty.
 
 <br/>
 
-![Screenshot](https://raw.githubusercontent.com/ahmedwadod/hello-world-nodejs/main/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/ahmedwadod/hello-world-k8s/main/screenshot.png)
 
 <br/>
 
